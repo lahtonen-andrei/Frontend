@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>ДЗ_2</title>
+  <style type="text/css">
+    body {
+      color: rgb(74, 28, 238);
+      background: rgba(34, 226, 184, 0.164);
+      border: 5px dotted;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12pt;
+      padding: 20px;
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <form class="barber_form" method="POST" name="zayavka" action="/zayavka.php">
+    <p class="caption">Записаться онлайн</p>
+    <div class="infofield">Тип стрижки:</div>
+    <select name="service_type">
+      <option>Стрижка</option>
+      <option>Стрижка бороды</option>
+      <option selected="selected">Стрижка + Борода</option>
+    </select>
+
+    <div class="infofield">Уровень специалиста:</div>
+    <label><input type="radio" name="master" value="1" />Стажер</label>
+    <label><input type="radio" name="master" value="2" checked="checked" />Барбер</label>
+    <label><input type="radio" name="master" value="3" />VIP Барбер</label>
+
+    <div class="infofield">Дополнительные услуги:</div>
+    <label><input type="checkbox" name="massage" /> Массаж головы</label>
+    <label><input type="checkbox" name="razor" /> Опасная бритва</label>
+
+    <div class="infofield">Дата и время записи:</div>
+    <input type="datetime-local" name="date_time" />
+
+    <fieldset>
+      <legend>Контактная информация</legend>
+      <div class="infofield">Ваше имя:</div>
+      <input type="text" name="name" placeholder="введите ваше имя" />
+      <div class="infofield">Ваш телефон:</div>
+      <input type="tel" name="phone" placeholder="например, +7 800 123-45-67" />
+    </fieldset>
+    <input type="submit" name="zayavka_submit" value="Записаться" />
+  </form>
+</body>
+
+</html>
